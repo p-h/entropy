@@ -35,7 +35,7 @@
                     (* probability information)) distinct-chars)))
 
 (defn -main [& args]
-  (if-not (empty? args)
+  (if (seq args)
     (let [filename (first args)
           file-chars (map int (slurp-bytes filename))
           distinct-chars (sort (distinct file-chars))]
