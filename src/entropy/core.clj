@@ -25,7 +25,7 @@
 (defn char-information
   "calculates the information content of a character"
   [c probability]
-  (log2 (/ 1.0 probability)))
+  (- (log2 probability)))
 
 (defn entropy
   "Calculates the entropy of a file"
